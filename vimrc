@@ -158,3 +158,6 @@ endif
 
 au BufRead,BufNewFile *.hamlc set ft=haml
 
+let g:syntastic_mode_map={ 'mode': 'active',
+                     \ 'active_filetypes': [],
+                     \ 'passive_filetypes': ['html'] }
