@@ -53,6 +53,7 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'brysgo/test_server'
 Plugin 'jgdavey/vim-blockle'
+Plugin 'thoughtbot/vim-rspec'
 
 "
 " General Editing
