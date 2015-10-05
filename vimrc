@@ -1,4 +1,5 @@
-" ----------
+
+----------
 " Vim Config
 " ----------
 "
@@ -138,6 +139,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'carlobaldassi/ConqueTerm'
 Plugin 'sjl/vitality.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
 filetype plugin indent on
