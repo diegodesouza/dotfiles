@@ -78,7 +78,7 @@ Plugin 'camelcasemotion'
 Plugin 'mgamba/edit-plus'
 Plugin 'brysgo/quickfixfix'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'regreplop.vim'
+" Plugin 'regreplop.vim'
 Plugin 'Peeja/insert_mode_background_color'
 Plugin 'vim-scripts/L9'
 Plugin 'Peeja/vim-cdo'
@@ -138,7 +138,7 @@ Plugin 'pivotal/tmux-config'
 Plugin 'tpope/vim-dispatch'
 Plugin 'carlobaldassi/ConqueTerm'
 Plugin 'sjl/vitality.vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
@@ -169,3 +169,5 @@ noremap ; l
 noremap l k
 noremap k j
 noremap j h
+
+set noswapfile
