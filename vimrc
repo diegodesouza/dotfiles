@@ -1,4 +1,5 @@
 
+
 " ----------
 " Vim Config
 " ----------
@@ -29,6 +30,8 @@ if empty(system("grep lazy_load ~/.vim/bundle/vundle/autoload/vundle.vim"))
 endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
+
+set virtualedit=all
 
 Plugin 'gmarik/vundle'
 
@@ -174,4 +177,15 @@ noremap l k
 noremap k j
 noremap j h
 
+" enter new line without entering insert mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
 set noswapfile
+
+" split horizontally window
+nmap <leader>H :split<CR>
+noremap <leader>h :split<CR>
+
+" nmap <leader>v :vsplit<CR>  already mapped 
+
