@@ -31,7 +31,7 @@ endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
-set virtualedit=all
+" set virtualedit=all
 
 Plugin 'gmarik/vundle'
 
@@ -58,6 +58,11 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'brysgo/test_server'
 Plugin 'jgdavey/vim-blockle'
 Plugin 'thoughtbot/vim-rspec'
+
+"
+" Elixir
+"
+Plugin 'elixir-lang/vim-elixir'
 
 "
 " General Editing
@@ -184,8 +189,6 @@ nmap <CR> o<Esc>
 set noswapfile
 
 " split horizontally window
-nmap <leader>H :split<CR>
-noremap <leader>h :split<CR>
-
+nmap <leader>h :sp<CR>
 " nmap <leader>v :vsplit<CR>  already mapped 
 
