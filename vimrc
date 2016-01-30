@@ -1,5 +1,3 @@
-
-
 " ----------
 " Vim Config
 " ----------
@@ -86,7 +84,6 @@ Plugin 'camelcasemotion'
 Plugin 'mgamba/edit-plus'
 Plugin 'brysgo/quickfixfix'
 Plugin 'Lokaltog/vim-easymotion'
-" Plugin 'regreplop.vim'
 Plugin 'Peeja/insert_mode_background_color'
 Plugin 'vim-scripts/L9'
 Plugin 'Peeja/vim-cdo'
@@ -106,11 +103,11 @@ Plugin 'ZoomWin'
 "
 " Searching
 "
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'epmatsw/ag.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'henrik/vim-qargs'
-Plugin 'kien/ctrlp.vim'
 
 "
 " Navigation
@@ -146,7 +143,6 @@ Plugin 'pivotal/tmux-config'
 Plugin 'tpope/vim-dispatch'
 Plugin 'carlobaldassi/ConqueTerm'
 Plugin 'sjl/vitality.vim'
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
@@ -192,3 +188,4 @@ set noswapfile
 nmap <leader>h :sp<CR>
 " nmap <leader>v :vsplit<CR>  already mapped 
 
+autocmd Filetype gitcommit setlocal spell textwidth=72
