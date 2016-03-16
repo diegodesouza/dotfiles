@@ -41,10 +41,11 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'molokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'wgibbs/vim-irblack'
-Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'candycode.vim'
 Plugin 'Color-Sampler-Pack'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 "
 " Rails
@@ -76,12 +77,9 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'sjl/gundo.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
-Plugin 'mgamba/j-split'
 Plugin 'matt-royal/diffthese'
 Plugin 'camelcasemotion'
-Plugin 'mgamba/edit-plus'
 Plugin 'brysgo/quickfixfix'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Peeja/insert_mode_background_color'
@@ -120,7 +118,6 @@ Plugin 'majutsushi/tagbar'
 "
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/jsx'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'slim-template/vim-slim'
 Plugin 'nono/vim-handlebars'
@@ -175,6 +172,10 @@ let g:syntastic_mode_map={ 'mode': 'active',
 "https://github.com/jaxbot/syntastic-react
 " This enables eslint's syntax checking for jsx
 let g:syntastic_javascript_checkers = ['eslint']
+
+" https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0 
 
 " this is for nerdtree to automatically open at start up
 " autocmd vimenter * NERDTree
