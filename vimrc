@@ -18,20 +18,19 @@ filetype off                   " required!
 
 " Based on http://erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
 let need_to_install_plugins=0
-if empty(system("grep lazy_load ~/.vim/bundle/vundle/autoload/vundle.vim"))
+
+if empty(system("grep lazy_load ~/.vim/bundle/Vundle.vim/autoload/vundle.vim"))
     echo "Installing Vundle..."
     echo ""
     silent !mkdir -p ~/.vim/bundle
-    silent !rm -rf ~/.vim/bundle/vundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    silent !rm -rf ~/.vim/bundle/Vundle.vim
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     let need_to_install_plugins=1
 endif
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" set virtualedit=all
-
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 "
 " Colorschemes
@@ -46,9 +45,10 @@ Plugin 'Color-Sampler-Pack'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'chriskempson/vim-tomorrow-theme'
 
 "
-" Rails
+" Ruby / Rails
 "
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
@@ -57,6 +57,8 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'brysgo/test_server'
 Plugin 'jgdavey/vim-blockle'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-rbenv'
+Plugin 'tpope/vim-rake'
 
 "
 " Elixir
@@ -77,11 +79,16 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'sjl/gundo.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ervandew/supertab'
+Plugin 'mgamba/j-split'
 Plugin 'matt-royal/diffthese'
 Plugin 'camelcasemotion'
+Plugin 'mgamba/edit-plus'
 Plugin 'brysgo/quickfixfix'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'regreplop.vim'
 Plugin 'Peeja/insert_mode_background_color'
 Plugin 'vim-scripts/L9'
 Plugin 'Peeja/vim-cdo'
@@ -92,6 +99,8 @@ Plugin 'honza/vim-snippets'
 Plugin 'YankRing.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-projectionist'
+Plugin 'kien/rainbow_parentheses.vim'
 
 "
 " Window Management
@@ -101,11 +110,12 @@ Plugin 'ZoomWin'
 "
 " Searching
 "
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'epmatsw/ag.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'henrik/vim-qargs'
+Plugin 'kien/ctrlp.vim'
 
 "
 " Navigation
@@ -124,13 +134,17 @@ Plugin 'nono/vim-handlebars'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-cucumber'
+Plugin 'quentindecock/vim-cucumber-align-pipes'
 Plugin 'juvenn/mustache.vim'
-Plugin 'Blackrush/vim-gocode'
+Plugin 'fatih/vim-go'
 Plugin 'rosstimson/scala-vim-support'
 Plugin 'guns/vim-clojure-static'
 Plugin 'chrisbra/csv.vim'
 Plugin 'elzr/vim-json'
 Plugin 'briancollins/vim-jst'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'mxw/vim-jsx'
+Plugin 'lambdatoast/elm.vim'
 
 "
 " Development Tool Integration
@@ -142,6 +156,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'carlobaldassi/ConqueTerm'
 Plugin 'sjl/vitality.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'mdelillo/vim-simple-bdd'
 
 call vundle#end()
 filetype plugin indent on
@@ -168,15 +183,6 @@ let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['html'] }
 
-" Configuration to user ESLint. 
-"https://github.com/jaxbot/syntastic-react
-" This enables eslint's syntax checking for jsx
-let g:syntastic_javascript_checkers = ['eslint']
-
-" https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015
-" Allow JSX in normal JS files
-let g:jsx_ext_required = 0 
-
 " this is for nerdtree to automatically open at start up
 " autocmd vimenter * NERDTree
 
@@ -192,7 +198,7 @@ nmap <CR> o<Esc>
 set noswapfile
 
 " split horizontally window
-nmap <leader>h :sp<CR>
+nmap <leader>h :split h<CR>
 " nmap <leader>v :vsplit<CR>  already mapped 
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
