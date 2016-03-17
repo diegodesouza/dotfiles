@@ -86,7 +86,7 @@ Plugin 'camelcasemotion'
 Plugin 'mgamba/edit-plus'
 Plugin 'brysgo/quickfixfix'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'regreplop.vim'
+" Pluginc'regreplop.vim'
 Plugin 'Peeja/insert_mode_background_color'
 Plugin 'vim-scripts/L9'
 Plugin 'Peeja/vim-cdo'
@@ -181,9 +181,8 @@ let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['html'] }
 
-" this is for nerdtree to automatically open at start up
-" autocmd vimenter * NERDTree
-
+" Remaps hjkl to jkl;
+"
 noremap ; l
 noremap l k
 noremap k j
@@ -194,9 +193,5 @@ nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
 set noswapfile
-
-" split horizontally window
-nmap <leader>h :split h<CR>
-" nmap <leader>v :vsplit<CR>  already mapped 
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
