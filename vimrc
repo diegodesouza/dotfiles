@@ -99,6 +99,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-projectionist'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'mattn/emmet-vim'
 
 "
 " Window Management
@@ -181,6 +182,8 @@ let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['html'] }
 
+let g:syntastic_javascript_checkers = ['eslint']
+
 " Remaps hjkl to jkl;
 "
 noremap ; l
@@ -193,5 +196,12 @@ nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
 set noswapfile
+
+" Colorscheme dafault
+colorscheme materialbox
+syntax enable
+
+" JSX syntax hightlighting in JS ext
+let g:jsx_ext_required = 0
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
