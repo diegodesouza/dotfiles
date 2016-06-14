@@ -204,4 +204,14 @@ syntax enable
 " JSX syntax hightlighting in JS ext
 let g:jsx_ext_required = 0
 
+" Undo folding for markdown
+let g:vim_markdown_folding_disabled = 1
+
+" Resize screen
+nnoremap <Leader>> :vertical resize +25<cr>
+nnoremap <Leader>> :vertical resize +25<cr>
+nnoremap <Leader>[ :vertical resize -10<cr>
+nnoremap <Leader>] :vertical resize -10<cr>
+
+
 autocmd Filetype gitcommit setlocal spell textwidth=72
