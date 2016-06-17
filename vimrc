@@ -186,10 +186,10 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " Remaps hjkl to jkl;
 "
-noremap ; l
-noremap l k
-noremap k j
-noremap j h
+" noremap ; l
+" noremap l k
+" noremap k j
+" noremap j h
 
 " enter new line without entering insert mode
 nmap <S-Enter> O<Esc>
