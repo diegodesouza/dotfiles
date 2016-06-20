@@ -211,7 +211,7 @@ let g:vim_markdown_folding_disabled = 1
 nnoremap <Leader>> :vertical resize +25<cr>
 nnoremap <Leader>> :vertical resize +25<cr>
 nnoremap <Leader>[ :vertical resize -10<cr>
-nnoremap <Leader>] :vertical resize -10<cr>
+nnoremap <Leader>] :vertical resize +10<cr>
 
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
