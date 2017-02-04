@@ -3,5 +3,5 @@
 " http://www.reddit.com/r/vim/comments/ggbcp/solarized_color_scheme/
 if has("gui_running")
   " Commented out to support vim-powerline
-  " let g:insert_mode_background_color = "#18434E"
+  " let g:insert_mode_background_color = "#80bccc"
 end
