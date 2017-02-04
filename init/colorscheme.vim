@@ -8,3 +8,6 @@ silent! let g:airline_theme='tomorrow'
 "
 " colorscheme solarized
 " let g:airline_theme='solarized'
+
+colorscheme materialbox
+syntax enable

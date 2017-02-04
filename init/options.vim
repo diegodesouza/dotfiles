@@ -21,7 +21,7 @@ set smarttab                    " Use shiftwidth to tab at line beginning
 set shiftwidth=2                " Width of autoindent
 set number                      " Line numbers
 set nowrap                      " No wrapping
-set backspace=indent,eol,start " Let backspace work over anything.
+set backspace=indent,eol,start  " Let backspace work over anything.
 set wildignore+=tags               " Ignore tags when globbing.
 set wildignore+=tmp/**             " ...Also tmp files.
 set wildignore+=public/uploads/**  " ...Also uploads.
@@ -63,3 +63,13 @@ let g:sql_type_default="postgresql"
 if has("gui_running")
   set noballooneval
 endif
+
+" enter new line without entering insert mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
+" Resize screen
+nnoremap <Leader>> :vertical resize +25<cr>
+nnoremap <Leader>> :vertical resize +25<cr>
+nnoremap <Leader>[ :vertical resize -10<cr>
+nnoremap <Leader>] :vertical resize +10<cr>

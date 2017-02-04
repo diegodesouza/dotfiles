@@ -11,3 +11,5 @@ function! AckVisual()
   cexpr system(command)
   cw
 endfunction
+
+let s:ack_default_options = "-s -H --nocolor --nogroup --column"

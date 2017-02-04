@@ -1,3 +1,5 @@
+" Modified by Diego de Souza on Feb 3 2017
+" 
 " ----------
 " Vim Config
 " ----------
@@ -35,13 +37,9 @@ Plugin 'VundleVim/Vundle.vim'
 "
 " Colorschemes
 "
-Plugin 'tpope/vim-vividchalk'
 Plugin 'chriskempson/base16-vim'
 Plugin 'molokai'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'wgibbs/vim-irblack'
-Plugin 'candycode.vim'
-Plugin 'Color-Sampler-Pack'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -50,20 +48,20 @@ Plugin 'chriskempson/vim-tomorrow-theme'
 "
 " Ruby / Rails
 "
-Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'brysgo/test_server'
 Plugin 'jgdavey/vim-blockle'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-rbenv'
-Plugin 'tpope/vim-rake'
+" Plugin 'thoughtbot/vim-rspec'
+" Plugin 'tpope/vim-rbenv'
+" Plugin 'tpope/vim-rake'
 
 "
 " Elixir
 "
-Plugin 'elixir-lang/vim-elixir'
+" Plugin 'elixir-lang/vim-elixir'
 
 "
 " General Editing
@@ -83,23 +81,17 @@ Plugin 'ervandew/supertab'
 Plugin 'mgamba/j-split'
 Plugin 'matt-royal/diffthese'
 Plugin 'camelcasemotion'
-Plugin 'mgamba/edit-plus'
 Plugin 'brysgo/quickfixfix'
 Plugin 'Lokaltog/vim-easymotion'
-" Pluginc'regreplop.vim'
-Plugin 'Peeja/insert_mode_background_color'
 Plugin 'vim-scripts/L9'
-Plugin 'Peeja/vim-cdo'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'YankRing.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'tpope/vim-projectionist'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'mattn/emmet-vim'
+" Plugin 'jiangmiao/auto-pairs'
 
 "
 " Window Management
@@ -109,18 +101,15 @@ Plugin 'ZoomWin'
 "
 " Searching
 "
-" Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'epmatsw/ag.vim'
 Plugin 'tpope/vim-abolish'
-Plugin 'henrik/vim-qargs'
-Plugin 'kien/ctrlp.vim'
 
 "
 " Navigation
 "
 Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
 
 "
 " Languages
@@ -128,9 +117,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'slim-template/vim-slim'
 Plugin 'nono/vim-handlebars'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-cucumber'
 Plugin 'quentindecock/vim-cucumber-align-pipes'
@@ -141,9 +128,9 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'chrisbra/csv.vim'
 Plugin 'elzr/vim-json'
 Plugin 'briancollins/vim-jst'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'mxw/vim-jsx'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'leafgarland/typescript-vim'
 
 "
 " Development Tool Integration
@@ -154,10 +141,9 @@ Plugin 'pivotal/tmux-config'
 Plugin 'tpope/vim-dispatch'
 Plugin 'carlobaldassi/ConqueTerm'
 Plugin 'sjl/vitality.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'mdelillo/vim-simple-bdd'
 
 call vundle#end()
+
 filetype plugin indent on
 
 syntax on
@@ -175,43 +161,3 @@ runtime! init/**.vim
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
-
-au BufRead,BufNewFile *.hamlc set ft=haml
-
-let g:syntastic_mode_map={ 'mode': 'active',
-                     \ 'active_filetypes': [],
-                     \ 'passive_filetypes': ['html'] }
-
-let g:syntastic_javascript_checkers = ['eslint']
-
-" Remaps hjkl to jkl;
-"
-" noremap ; l
-" noremap l k
-" noremap k j
-" noremap j h
-
-" enter new line without entering insert mode
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
-
-set noswapfile
-
-" Colorscheme dafault
-colorscheme materialbox
-syntax enable
-
-" JSX syntax hightlighting in JS ext
-let g:jsx_ext_required = 0
-
-" Undo folding for markdown
-let g:vim_markdown_folding_disabled = 1
-
-" Resize screen
-nnoremap <Leader>> :vertical resize +25<cr>
-nnoremap <Leader>> :vertical resize +25<cr>
-nnoremap <Leader>[ :vertical resize -10<cr>
-nnoremap <Leader>] :vertical resize +10<cr>
-
-
-autocmd Filetype gitcommit setlocal spell textwidth=72
