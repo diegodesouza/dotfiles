@@ -82,6 +82,7 @@ else
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'editorconfig/editorconfig-vim'
   Plugin 'tpope/vim-projectionist'
+  Plugin 'jiangmiao/auto-pairs'
 
   "
   " Searching
