@@ -114,10 +114,12 @@ else
   Plugin 'guns/vim-clojure-static'
   Plugin 'chrisbra/csv.vim'
   Plugin 'elzr/vim-json'
+
   Plugin 'mxw/vim-jsx'
   Plugin 'lambdatoast/elm.vim'
   Plugin 'leafgarland/typescript-vim'
   Plugin 'burnettk/vim-angular'
+
 
   "
   " Development Tool Integration
