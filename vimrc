@@ -104,9 +104,7 @@ else
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'pangloss/vim-javascript'
   Plugin 'plasticboy/vim-markdown'
-  Plugin 'slim-template/vim-slim'
   Plugin 'nono/vim-handlebars'
-  Plugin 'kchmck/vim-coffee-script'
   Plugin 'tpope/vim-haml'
   Plugin 'tpope/vim-cucumber'
   Plugin 'quentindecock/vim-cucumber-align-pipes'
@@ -116,12 +114,12 @@ else
   Plugin 'guns/vim-clojure-static'
   Plugin 'chrisbra/csv.vim'
   Plugin 'elzr/vim-json'
-  Plugin 'briancollins/vim-jst'
-  Plugin 'digitaltoad/vim-jade'
+
   Plugin 'mxw/vim-jsx'
   Plugin 'lambdatoast/elm.vim'
   Plugin 'leafgarland/typescript-vim'
-  Plugin 'digitaltoad/vim-pug'
+  Plugin 'burnettk/vim-angular'
+
 
   "
   " Development Tool Integration

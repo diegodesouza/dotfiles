@@ -1,7 +1,14 @@
 # To Install
 (Re)move ~/.vim and ~/.vimrc if you have them already, and run:
+    
+    Original source:
 
     git clone https://github.com/pivotal/vim-config.git ~/.vim
+
+    With my modifications: 
+
+    git clone https://github.com/diegodesouza/dotfiles.git ~/.vim
+
     ~/.vim/bin/install
 
 # Updating
@@ -45,7 +52,6 @@ mind that this config has comma mapped as the leader key:
 * [edit-plus](https://github.com/mgamba/edit-plus/blob/master/plugin/edit-plus.vim) lets you refer to line numbers when opening files.  For instance, type `:EP README.md:10` to jump to line 10 of your helpful README.  Sometimes when you type `:e` it is automatically changed to `:EP`.  This is useful for opening test failures from the command line into vim.
 * [quickfixfix](https://github.com/brysgo/quickfixfix) maps the NERDtree key bindings to the quickfix window.  If you open NERDtree (`\\`) and press `?`, the descriptions of `o`, `i`, `s`, and `go` can be used in the quickfix window.
 * [vim-easymotion](https://github.com/Lokaltog/vim-easymotion) lets you use see where repeated motions would take you.  If you've ever used vimium's link navigation, it's like that.  Type the leader key twice and a motion to see a bunch of annotations in your file based on where repeated uses of that motion would take you, then press a number to go there.  For instance, to jump 2 words you can do `,,wb` instead of `2w`.
-* [regreplop](http://www.vim.org/scripts/script.php?script_id=2702) lets you paste text over other text without destroying your default register.  Usually, if you yanked something and wanted to paste it over a word using `viwp`, you couldn't paste it again because the word you deleted overwrote what you originally yanked.  This plugin provides Ctrl-K to paste while keeping your buffer.  You can use it in visual mode or follow <Ctrl-K> with a motion.  Very handy for repeated replacements.
 * [insert_mode_background_color](https://github.com/Peeja/insert_mode_background_color) changes the background color when you are insert mode.
 * [vim-cdo](https://github.com/Peeja/vim-cdo) runs commands on every entry in the quickfix or location windows.  For instance, if you just searched for something with `:L9GrepBuffer foo` or `:Ag foo` and want to change the foos you found into bar, you could run `:Cdo s/foo/bar/`.  If you're doing a replacement like that, make sure not to do `:Cdo %s/.../...` with the percent sign because the first replacement in a file will mess up the later ones.  `:Ldo` is the same but for the location list, and suffix your commands with `/c` to confirm changes.
 * [vim-snipmate](https://github.com/garbas/vim-snipmate) and [vim-snippets](https://github.com/honza/vim-snippets) provide TextMate like snippets where you can jump around the snippet with the tab key.
@@ -74,11 +80,6 @@ lets you view and cycle through your previous copy and paste registers on the fl
 * [editorconfig/editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) teaches vim how to follow the rules defined in `.editorconfig` files in your project, so that you can unify project preferences across multiple editors. See the [editorconfig homepage](http://editorconfig.org/) for more information.
 * [projectionist.vim](https://github.com/tpope/vim-projectionist) gives you the ability to jump between related files, such as between a code file and its spec.
   * It also supports adding a `.projections.json` file to your project so you can teach Vim how to find the spec for the current source file. See the [README](https://github.com/tpope/vim-projectionist) for more details.
-* [rainbow-parentheses](https://github.com/kien/rainbow_parentheses.vim) highlights nested parentheses, brackets, and curly braces with differing colors so you can match them up more easily.
-  * Use `,rp` to toggle rainbow parenthesis mode in the current file. By default it is off.
-
-## Window Management
-* [ZoomWin](http://www.vim.org/scripts/script.php?script_id=508) lets you close all other windows with `<C-w>o`.  You can restore all the closed windows with the same command.  Useful with `:tabo` to close everything but what you're working on.
 
 ## Searching
 * [ack](https://github.com/mileszs/ack.vim) lets you shell out to ack within vim using `:Ack pattern [directory]`.  By default, results show up in the quickfix window.  You can use `:AckAdd` to append to the quickfix window or prefix 'Ack' with an 'L' to use the location list (just like `:grep`'s siblings).
@@ -108,24 +109,18 @@ lets you view and cycle through your previous copy and paste registers on the fl
 * [vim-simple-bdd](https://github.com/mdelillo/vim-simple-bdd) generates method declarations from [simple_bdd](https://github.com/robb1e/simple_bdd) steps
 
 ## Colorschemes
-* [Vivid Chalk](https://github.com/tpope/vim-vividchalk)
-* [Molokai](https://github.com/tomasr/molokai)
+* [base16](https://github.com/chriskempson/base16-vim)
 * [Solarized](http://ethanschoonover.com/solarized) ([github](https://github.com/altercation/vim-colors-solarized))
-* [ir_black](https://github.com/wesgibbs/vim-irblack)
 * [tomorrow](https://github.com/chriskempson/vim-tomorrow-theme)
-* [candycode](http://www.vim.org/scripts/script.php?script_id=1635)
 * Color-Sampler-Pack
 * [colorschemes](https://github.com/flazz/vim-colorschemes)
-* [base16](https://github.com/chriskempson/base16-vim)
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 
 ## Languages
 * [vim-ruby](https://github.com/vim-ruby/vim-ruby)
 * [vim-javascript](https://github.com/pangloss/vim-javascript)
 * [vim-markdown](https://github.com/plasticboy/vim-markdown)
-* [vim-slim](https://github.com/slim-template/vim-slim)
 * [vim-handlebars](https://github.com/nono/vim-handlebars)
-* [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
 * [vim-haml](https://github.com/tpope/vim-haml)
 * [vim-cucumber](https://github.com/tpope/vim-cucumber)
 * [vim-cucumber-align-pipes](https://github.com/quentindecock/vim-cucumber-align-pipes)
@@ -135,10 +130,9 @@ lets you view and cycle through your previous copy and paste registers on the fl
 * [vim-clojure-static](https://github.com/guns/vim-clojure-static)
 * [csv.vim](https://github.com/chrisbra/csv.vim)
 * [vim-json](https://github.com/elzr/vim-json)
-* [vim-jst](https://github.com/briancollins/vim-jst)
-* [vim-jade](https://github.com/digitaltoad/vim-jade)
 * [vim-jsx](https://github.com/mxw/vim-jsx)
 * [elm.vim](https://github.com/lambdatoast/elm.vim)
+* [vim-angular](https://github.com/burnettk/vim-angular)
 
 # Advanced
 
