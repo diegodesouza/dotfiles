@@ -22,8 +22,8 @@ nmap <leader>s  :%s/
 vmap <leader>s  :s/
 
 " Split screen
-map <leader>v   :vsp<CR>
-map <leader>h   :sp<CR>
+map <leader>v :vsplit<CR>
+map <leader>h :split<CR>
 
 " Move between screens
 map <leader>w   ^Ww
@@ -187,8 +187,6 @@ map <D-F> :Ag<Space>
 
 " Convert a word to to let(:word) { double(:word) }
 nmap <leader>ld <Plug>LocalMakelet
-
-nmap <leader>rp :RainbowParenthesesToggle<CR>
 
 " Convert simple_bdd steps into methods
 nnoremap <leader>bdd :SimpleBDD<CR>
