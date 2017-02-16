@@ -84,6 +84,7 @@ else
   Plugin 'tpope/vim-projectionist'
   Plugin 'jiangmiao/auto-pairs'
   Plugin 'othree/javascript-libraries-syntax.vim'
+  Plugin 'mattn/emmet-vim'
 
   "
   " Searching
