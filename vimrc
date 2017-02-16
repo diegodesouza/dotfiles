@@ -82,6 +82,8 @@ else
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'editorconfig/editorconfig-vim'
   Plugin 'tpope/vim-projectionist'
+  Plugin 'jiangmiao/auto-pairs'
+  Plugin 'othree/javascript-libraries-syntax.vim'
 
   "
   " Searching
@@ -114,12 +116,10 @@ else
   Plugin 'guns/vim-clojure-static'
   Plugin 'chrisbra/csv.vim'
   Plugin 'elzr/vim-json'
-
   Plugin 'mxw/vim-jsx'
   Plugin 'lambdatoast/elm.vim'
   Plugin 'leafgarland/typescript-vim'
   Plugin 'burnettk/vim-angular'
-
 
   "
   " Development Tool Integration
