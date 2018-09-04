@@ -1,4 +1,4 @@
-" Modified by Diego de Souza on Feb 3 2017
+" Modified by Diego de Souza on Sept 4 2018
 " 
 " ----------
 " Vim Config
@@ -40,13 +40,13 @@ else
   "
   " Ruby / Rails
   "
-  Plugin 'tpope/vim-rails'
-  Plugin 'tpope/vim-endwise'
-  Plugin 'ecomba/vim-ruby-refactoring'
-  Plugin 'nelstrom/vim-textobj-rubyblock'
-  Plugin 'jgdavey/vim-blockle'
-  Plugin 'tpope/vim-rbenv'
-  Plugin 'tpope/vim-rake'
+  "Plugin 'tpope/vim-rails'
+  "Plugin 'tpope/vim-endwise'
+  "Plugin 'ecomba/vim-ruby-refactoring'
+  "Plugin 'nelstrom/vim-textobj-rubyblock'
+  "Plugin 'jgdavey/vim-blockle'
+  "Plugin 'tpope/vim-rbenv'
+  "Plugin 'tpope/vim-rake'
 
   "
   " General Editing
@@ -61,7 +61,6 @@ else
   Plugin 'tpope/vim-unimpaired'
   Plugin 'sjl/gundo.vim'
   Plugin 'godlygeek/tabular'
-  " Plugin 'scrooloose/syntastic'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'ervandew/supertab'
@@ -77,12 +76,14 @@ else
   " pre-requisite for of snipmate
     Plugin 'MarcWeber/vim-addon-mw-utils'
     Plugin 'tomtom/tlib_vim'
+  Plugin 'garbas/vim-snipmate'
   Plugin 'honza/vim-snippets'
   Plugin 'YankRing.vim'
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'editorconfig/editorconfig-vim'
   Plugin 'tpope/vim-projectionist'
-  Plugin 'jiangmiao/auto-pairs'
+  Plugin 'kien/rainbow_parentheses.vim'
+  "Plugin 'jiangmiao/auto-pairs'
   Plugin 'othree/javascript-libraries-syntax.vim'
   Plugin 'mattn/emmet-vim'
 
@@ -104,21 +105,21 @@ else
   "
   " Languages
   "
-  Plugin 'vim-ruby/vim-ruby'
+  "Plugin 'vim-ruby/vim-ruby'
   Plugin 'pangloss/vim-javascript'
   Plugin 'plasticboy/vim-markdown'
   Plugin 'nono/vim-handlebars'
   Plugin 'tpope/vim-haml'
-  Plugin 'tpope/vim-cucumber'
-  Plugin 'quentindecock/vim-cucumber-align-pipes'
+  "Plugin 'tpope/vim-cucumber'
+  "Plugin 'quentindecock/vim-cucumber-align-pipes'
   Plugin 'juvenn/mustache.vim'
-  Plugin 'fatih/vim-go'
-  Plugin 'rosstimson/scala-vim-support'
-  Plugin 'guns/vim-clojure-static'
+  "Plugin 'fatih/vim-go'
+  "Plugin 'rosstimson/scala-vim-support'
+  "Plugin 'guns/vim-clojure-static'
   Plugin 'chrisbra/csv.vim'
   Plugin 'elzr/vim-json'
   Plugin 'mxw/vim-jsx'
-  Plugin 'lambdatoast/elm.vim'
+  "Plugin 'lambdatoast/elm.vim'
   Plugin 'leafgarland/typescript-vim'
   Plugin 'burnettk/vim-angular'
 
